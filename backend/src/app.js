@@ -7,6 +7,10 @@ const todoRoutes = require("./routes/todoRoutes");
 const userRoutes = require("./routes/userRoutes");
 
 const app = express();
+
+// Add this line
+app.set("trust proxy", 1);
+
 app.use(express.json());
 app.use(cookieParser());
 app.use(
